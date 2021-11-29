@@ -1,0 +1,61 @@
+{
+    "name": "mfonte/larecaptcha",
+    "description": "Simple and painless Google reCAPTCHA package for Laravel framework",
+    "version": "1.0.0",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "recaptcha",
+        "captcha",
+        "laravel",
+        "validation"
+    ],
+    "authors": [
+        {
+            "name": "Roberto Belotti",
+            "email": "roby.belotti@gmail.com",
+            "homepage": "https://biscolab.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Maurizio Fonte",
+            "email": "fonte.maurizio@gmail.com",
+            "homepage": "https://www.mauriziofonte.it",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "laravel/framework": "^7.0|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "5.*|6.*",
+        "phpunit/phpunit": "^9.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mfonte\\ReCaptcha\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mfonte\\ReCaptcha\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --colors=always"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mfonte\\ReCaptcha\\ReCaptchaServiceProvider"
+            ],
+            "aliases": {
+                "ReCaptcha": "Mfonte\\ReCaptcha\\Facades\\ReCaptcha"
+            }
+        }
+    }
+}
